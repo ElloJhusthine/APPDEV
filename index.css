@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333;
+}
+
+nav {
+    background-color: #5f1f77; /* Dark violet for the navbar */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #9b4d96; /* Light violet on hover */
+    border-radius: 5px;
+}
+
+header {
+    text-align: center;
+    color: #5f1f77; /* Dark violet text */
+    padding: 100px 20px;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.activities {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.activity-links {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #5f1f77; /* Dark violet background for buttons */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #9b4d96; /* Light violet on hover */
+}
+
+footer {
+    text-align: center;
+    background: #5f1f77; /* Dark violet background for footer */
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}

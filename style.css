@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    background-color: #9b4d96; /* Violet background for the header */
+    color: white;
+    padding: 20px;
+}
+
+header ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the menu items */
+}
+
+header ul li {
+    margin: 0 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header ul li a:hover {
+    color: #ff69b4; /* Pink hover effect */
+}
+
+.image-section {
+    margin: 20px auto;
+}
+
+.image-section img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Make the image circular */
+}
+
+.page-content {
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add soft shadow to content */
+}
+
+h1 {
+    color: #9b4d96; /* Violet color for the heading */
+}
+
+div {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #e0aaff; /* Light violet border for div */
+    background: #f1e3f6; /* Light pinkish violet background */
+    border-radius: 5px; /* Round the corners */
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #9b4d96; /* Violet background for footer */
+    color: white;
+    text-align: center;
+}

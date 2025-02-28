@@ -1,2 +1,2 @@
-# APPDEV
-PIT 1 and PIT 2
+# APPDev_HTML-CSS
+PIT1 and PIT 2
