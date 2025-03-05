@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects Taken</title>
+    <script>
+        function searchSubject() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let subjects = document.getElementsByClassName("subject");
+
+            for (let i = 0; i < subjects.length; i++) {
+                let subjectName = subjects[i].textContent.toLowerCase();
+                subjects[i].style.display = subjectName.includes(input) ? "" : "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Subjects Taken</h1>
+    <input type="text" id="searchInput" onkeyup="searchSubject()" placeholder="Search for a subject...">
+    
+    <ul>
+        <li class="subject">Mathematics</li>
+        <li class="subject">Science</li>
+        <li class="subject">History</li>
+        <li class="subject">English</li>
+        <li class="subject">Computer Science</li>
+    </ul>
+
+    <button onclick="window.location.href='index.html'">Back</button>
+</body>
+</html>
