@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style2.css">
 </head>
-
 <body>
 
     <header>
@@ -25,6 +23,7 @@
     <div class="page-content">
         <div id="courses">
             <h2>My Finished Courses</h2>
+            <input type="text" id="search-bar" placeholder="Search for a subject..." onkeyup="filterCourses()">
             <ul id="course-list">
                 <li>Loading courses...</li>
             </ul>
@@ -38,5 +37,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
