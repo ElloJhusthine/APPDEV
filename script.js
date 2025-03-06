@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     fetch("courses.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Failed to load JSON file");
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             displayCourses(data.courses);
         })
@@ -16,20 +11,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function displayCourses(courses) {
-    const coursesContainer = document.getElementById("courses");
-    coursesContainer.innerHTML = "<h2>My Finished Courses</h2>";
+    const coursesContainer = document.getElementById("course-list");
+    coursesContainer.innerHTML = "";
 
     courses.forEach(course => {
-        const courseDiv = document.createElement("div");
-        courseDiv.classList.add("course");
+        course.subjects.forEach(subject => {
+            const li = document.createElement("li");
+            li.textContent = subject;
+            li.classList.add("course-item");
+            coursesContainer.appendChild(li);
+        });
+    });
+}
 
-        courseDiv.innerHTML = `
-            <h3>${course.year} - ${course.semester}</h3>
-            <ul>
-                ${course.subjects.map(subject => `<li>${subject}</li>`).join("")}
-            </ul>
-        `;
+function filterCourses() {
+    const searchInput = document.getElementById("search-bar").value.toLowerCase();
+    const courseItems = document.querySelectorAll(".course-item");
 
-        coursesContainer.appendChild(courseDiv);
+    courseItems.forEach(item => {
+        if (item.textContent.toLowerCase().includes(searchInput)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
     });
 }
