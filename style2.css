@@ -38,18 +38,6 @@ header ul li a:hover {
     color: #8e44ad;
 }
 
-.image-section {
-    margin: 30px auto;
-}
-
-.image-section img {
-    width: 150px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .page-content {
     margin: 30px auto;
     width: 80%;
@@ -65,7 +53,17 @@ h1 {
     margin-bottom: 20px;
 }
 
-div {
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-item {
     margin: 15px 0;
     padding: 15px;
     border-radius: 8px;
