@@ -23,10 +23,21 @@
     <div class="page-content">
         <div id="courses">
             <h2>My Finished Courses</h2>
-            <input type="text" id="search-bar" placeholder="Search for a subject..." onkeyup="filterCourses()">
-            <ul id="course-list">
-                <li>Loading courses...</li>
-            </ul>
+            <input type="text" id="search-bar" placeholder="Search for a course..." onkeyup="filterCourses()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year Level</th>
+                        <th>Semester</th>
+                        <th>Code</th>
+                        <th>Description</th>
+                        <th>Credit</th>
+                    </tr>
+                </thead>
+                <tbody id="course-table">
+                    <tr><td colspan="5">Loading courses...</td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
