@@ -49,7 +49,6 @@
             "description": "Movement Enhancement",
             "credit": "2.0"
         },
-        
         {
             "year_level": "1st",
             "sem": "1st",
@@ -180,4 +179,8 @@
             "year_level": "2nd",
             "sem": "2nd",
             "code": "IT223",
-            "description": "Web Systems and Tec
+            "description": "Web Systems and Technologies",
+            "credit": "3.0"
+        }
+    ]
+}
