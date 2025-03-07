@@ -6,31 +6,37 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => {
             console.error("Error fetching JSON:", error);
-            document.getElementById("course-list").innerHTML = "<li>Failed to load courses.</li>";
+            document.getElementById("course-table").innerHTML = "<tr><td colspan='5'>Failed to load courses.</td></tr>";
         });
 });
 
 function displayCourses(courses) {
-    const coursesContainer = document.getElementById("course-list");
-    coursesContainer.innerHTML = "";
+    const tableBody = document.getElementById("course-table");
+    tableBody.innerHTML = "";
 
     courses.forEach(course => {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${course.code}</strong>: ${course.description} (${course.credit} credits) - ${course.year_level} Year, ${course.sem} Semester`;
-        li.classList.add("course-item");
-        coursesContainer.appendChild(li);
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${course.year_level}</td>
+            <td>${course.sem}</td>
+            <td>${course.code}</td>
+            <td>${course.description}</td>
+            <td>${course.credit}</td>
+        `;
+        row.classList.add("course-row");
+        tableBody.appendChild(row);
     });
 }
 
 function filterCourses() {
     const searchInput = document.getElementById("search-bar").value.toLowerCase();
-    const courseItems = document.querySelectorAll(".course-item");
+    const courseRows = document.querySelectorAll(".course-row");
 
-    courseItems.forEach(item => {
-        if (item.textContent.toLowerCase().includes(searchInput)) {
-            item.style.display = "block";
+    courseRows.forEach(row => {
+        if (row.textContent.toLowerCase().includes(searchInput)) {
+            row.style.display = "";
         } else {
-            item.style.display = "none";
+            row.style.display = "none";
         }
     });
 }
