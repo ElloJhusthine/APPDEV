@@ -15,12 +15,10 @@ function displayCourses(courses) {
     coursesContainer.innerHTML = "";
 
     courses.forEach(course => {
-        course.subjects.forEach(subject => {
-            const li = document.createElement("li");
-            li.textContent = subject;
-            li.classList.add("course-item");
-            coursesContainer.appendChild(li);
-        });
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${course.code}</strong>: ${course.description} (${course.credit} credits) - ${course.year_level} Year, ${course.sem} Semester`;
+        li.classList.add("course-item");
+        coursesContainer.appendChild(li);
     });
 }
 
