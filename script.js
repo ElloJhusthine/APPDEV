@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => {
             console.error("Error fetching JSON:", error);
-            document.getElementById("courses").innerHTML = "<p>Failed to load courses.</p>";
+            document.getElementById("course-list").innerHTML = "<li>Failed to load courses.</li>";
         });
 });
 
